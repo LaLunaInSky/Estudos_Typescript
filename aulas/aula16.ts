@@ -1,5 +1,5 @@
-class Conta_Aula16 {
-    private número_Aula16:number
+abstract class Conta_Aula16 {
+    private readonly número_Aula16:number
     private titular_Aula16:string
     protected tipoDeConta_Aula16:string
     private saldoConta_Aula16:number
