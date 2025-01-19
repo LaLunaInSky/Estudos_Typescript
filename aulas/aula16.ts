@@ -59,12 +59,23 @@ class ContaPF_Aula16 extends Conta_Aula16 {
     }
 
     public depositarSaldoNaContaPF_Aula16 = (quantidade:number):void=>{
-        const limite_Aula16 = 1000
+        const limiteDeposito_Aula16 = 1000
         
-        if (quantidade <= limite_Aula16 && quantidade >= 1) {
+        if (quantidade <= limiteDeposito_Aula16 && quantidade >= 1) {
             this.depositarSaldoNaConta_Aula16(quantidade) 
         } else {
-            console.log(`Deposito de R$${quantidade} é superior ao limite de R$${limite_Aula16} para conta PF, deposito NEGADO!`)
+            console.log(`Deposito de R$${quantidade} é superior ao limite de R$${limiteDeposito_Aula16} para conta PF, deposito NEGADO!`)
+            this.visualizarSaldoDaConta_Aula16()
+        }
+    }
+
+    public sacarSaldoNaContaPF_Aula16 = (quantidade: number):void=>{
+        const limiteSaque_Aula16 = 1000
+        
+        if (quantidade <= limiteSaque_Aula16 && quantidade >= 1) {
+            this.sacarSaldoNaConta_Aula16(quantidade)
+        } else {
+            console.log(`Saque de R$${quantidade} é superior ao limite de R$${limiteSaque_Aula16} para conta PF, saque NEGADO!`)
             this.visualizarSaldoDaConta_Aula16()
         }
     }
@@ -88,12 +99,23 @@ class ContaPJ_Aula16 extends Conta_Aula16 {
     }
 
     public depositarSaldoNaContaPJ_Aula16 = (quantidade:number):void=>{
-        const limite_Aula16:number = 15000
+        const limiteDeposito_Aula16:number = 15000
         
-        if (quantidade <= limite_Aula16 && quantidade >= 1) {
+        if (quantidade <= limiteDeposito_Aula16 && quantidade >= 1) {
             this.depositarSaldoNaConta_Aula16(quantidade) 
         } else {
-            console.log(`Deposito de R$${quantidade} é superior ao limite de R$${limite_Aula16} para conta PJ, deposito NEGADO!`)
+            console.log(`Deposito de R$${quantidade} é superior ao limite de R$${limiteDeposito_Aula16} para conta PJ, deposito NEGADO!`)
+            this.visualizarSaldoDaConta_Aula16()
+        }
+    }
+
+    public sacarSaldoNaContaPJ_Aula16 = (quantidade:number):void=>{
+        const limiteSaque_Aula16:number = 15000
+        
+        if (quantidade <= limiteSaque_Aula16 && quantidade >= 1) {
+            this.sacarSaldoNaConta_Aula16(quantidade) 
+        } else {
+            console.log(`Saque de R$${quantidade} é superior ao limite de R$${limiteSaque_Aula16} para conta PJ, saque NEGADO!`)
             this.visualizarSaldoDaConta_Aula16()
         }
     }
@@ -107,3 +129,6 @@ conta2_Aula16.visualizarSaldoDaConta_Aula16()
 
 conta1_Aula16.depositarSaldoNaContaPF_Aula16(500)
 conta2_Aula16.depositarSaldoNaContaPJ_Aula16(5000)
+
+conta1_Aula16.sacarSaldoNaContaPF_Aula16(1200)
+conta2_Aula16.sacarSaldoNaContaPJ_Aula16(50000)
