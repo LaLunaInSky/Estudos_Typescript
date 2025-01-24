@@ -1,18 +1,46 @@
-namespace Veiculos {
-    export abstract class Carro_Aula20{
-        nome:string
-        motor:Motores.Motor_Aula20
-    
-        constructor(nome:string, cilindros:number, potencia:number){
+namespace Veiculos_Aula20 {
+    enum Cores_Aula20{
+        "Preto", "Branco", "Vermelho", "Amarelo", "Azul", "Prata"
+    }
+
+    abstract class Carro_Aula20{
+        private nome:string
+        private motor:Motores_Aula20.Motor_Aula20
+        private cor:string
+
+        constructor(nome:string, cor:Cores_Aula20, motor:Motores_Aula20.Motor_Aula20){
             this.nome = nome
-            console.log(`Este é o ${this.nome}, um carro!`)
-            this.motor = new Motores.Motor_Aula20(cilindros, potencia)
+            this.cor = Cores_Aula20[cor]
+            console.log(`Este é o ${this.nome}, um carro ${this.cor}!\n`)
+            this.motor = motor
+        }
+
+        public ligarMotor_Aula20(){
+            this.motor.ligarOuDesligarMotor_Aula20 = true
+            console.log(`O motor do carro ${this.nome} está ${this.motor.infoLigadoMotor_Aula20? "ligado":"desligado"}`)
+        }
+
+        public desligarMotor_Aula20(){
+            this.motor.ligarOuDesligarMotor_Aula20 = false
+            console.log(`O motor do carro ${this.nome} está ${this.motor.infoLigadoMotor_Aula20? "ligado":"desligado"}`)
+        }
+    }
+
+    export class CarroEsportivo_Aula20 extends Carro_Aula20{
+        constructor(nome:string, cor:Cores_Aula20){
+            super(nome, cor, new Motores_Aula20.Motor_Aula20(6, 300, new Motores_Aula20.Turbo_Aula20(100)))
+        }
+    }
+
+    export class CarroPopular_Aula20 extends Carro_Aula20{
+        constructor(nome:string, cor:Cores_Aula20){
+            super(nome, cor, new Motores_Aula20.Motor_Aula20(3, 100))
         }
     }
 }
  
-namespace Motores {
-    class Turbo_Aula20{
+namespace Motores_Aula20 {
+    export class Turbo_Aula20{
         private potencia:number
 
         constructor(potencia:number){
@@ -37,12 +65,18 @@ namespace Motores {
             console.log(`Este carro tem a potência de ${this.potencia} cavalos, tem ${this.cilindros} cilindros, e está ${this.ligado? "ligado":"desligado"}`)
         }
 
-        set ligar_Aula20(ligado:boolean){
+        set ligarOuDesligarMotor_Aula20(ligado:boolean){
             this.ligado = ligado
-            console.log(`O motor está ${this.ligado? "ligado":"desligado"}`)
+        }
+
+        get infoLigadoMotor_Aula20(){
+            return this.ligado
         }
     }
 }
 
+const carro01_Aula20 = new Veiculos_Aula20.CarroEsportivo_Aula20("vrumvrum", 5)
+const carro02_Aula20 = new Veiculos_Aula20.CarroPopular_Aula20("jaime", 3)
 
-//const c1_Aula20 = new Veiculos.Carro_Aula20('Jaime', 4, 100)
+carro02_Aula20.ligarMotor_Aula20()
+carro01_Aula20.ligarMotor_Aula20()
