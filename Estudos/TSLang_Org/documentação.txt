@@ -1,0 +1,5 @@
+https://www.typescriptlang.org/docs/
+
+ /*******************/
+/* Capítulo Parado */
+https://www-typescriptlang-org.translate.goog/docs/handbook/intro.html?_x_tr_sl=auto&_x_tr_tl=pt&_x_tr_hl=pt-BR&_x_tr_pto=wapp
