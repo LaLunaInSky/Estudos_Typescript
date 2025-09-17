@@ -3,3 +3,6 @@ https://angular.dev/overview
  /*******************/
 /* Capítulo Parado */
 https://angular-dev.translate.goog/installation?_x_tr_sl=auto&_x_tr_tl=pt&_x_tr_hl=pt-BR&_x_tr_pto=wapp
+
++ Essenciais +
+https://angular-dev.translate.goog/essentials/components?_x_tr_sl=auto&_x_tr_tl=pt&_x_tr_hl=pt-BR&_x_tr_pto=wapp
