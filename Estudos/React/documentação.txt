@@ -1,1 +1,5 @@
 https://react.dev/
+
+ /*******************/
+/* Capítulo Parado */
+https://react-dev.translate.goog/learn/describing-the-ui?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt-BR&_x_tr_pto=wapp&_x_tr_hist=true
